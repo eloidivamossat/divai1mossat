@@ -1,0 +1,23 @@
+<%= render "shared/header" %>
+<div class="container">
+<h1>Mostrar Pelicula</h1>
+<p>ID: <%= @peli.id %></p>
+<p>Nombre: <%= @peli.name %></p>
+<p>Director: <%= @peli.director %></p>
+<p>Actor Secundario : <%= @peli.supporting_actor %></p>
+<p>Premios: <%= @peli.awards %></p>
+<p>Url: <%= @peli.url %></p>
+<p>Actor Principal: <%= @peli.actor %></p>
+<p>Año: <%= @peli.year %></p>
+<p>Género: <%= @peli.genre %></p>
+<p>Precio: <%= @peli.price %></p>
+<br>
+<h2> <%= @peli.comentarios.count %> Comentarios</h2>
+  <%= render @peli.comentarios %>
+  <h3> Add a Comentarios: </h3>
+  <%= render 'comentarios/form' %>
+<br>
+<%= link_to "Index",  peliculas_path, class:"btn btn-md btn-success" %>
+
+</div>
+<%= render "shared/footer" %>
